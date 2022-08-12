@@ -1,5 +1,5 @@
 import React from "react"
-export default function OneRecipe({recipe}){
+export default function OneRecipe({recipe, deleteRecipe}){
     
 
 //---return---
@@ -10,7 +10,7 @@ export default function OneRecipe({recipe}){
             <td><img src={recipe.photo} alt=""/></td>
             <td>{recipe.ingredients}</td>
             <td>{recipe.preparation}</td>
-            <td><button name="delete">Delete</button></td>
+            <td><button name="delete" onClick={deleteRecipe}>Delete</button></td>
         </tr>
     )
 }

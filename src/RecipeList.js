@@ -1,7 +1,7 @@
 import React from "react";
 import OneRecipe from "./OneRecipe";
 
-function RecipeList({recipes}) {
+function RecipeList({recipes, deleteRecipe}) {
   
   // TODO: Display the list of recipes using the structure of table that is provided.
   // TODO: Create at least one additional component that is used by this component.
@@ -21,8 +21,8 @@ function RecipeList({recipes}) {
           </tr>
         </thead>
         <tbody>
-            {/* recipes.map((recipe, index)=> <OneRecipe />) to a component that returns one singular row... */}
-            {recipes.map((recipe, index)=> <OneRecipe recipe={recipe} key={index}/>)}
+            {recipes.map((recipe, index)=> 
+            <OneRecipe recipe={recipe} key={index} deleteRecipe={()=>deleteRecipe(index)}/>)}
         </tbody>
       </table>
     </div>

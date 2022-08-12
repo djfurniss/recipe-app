@@ -13,11 +13,16 @@ function App() {
   function addRecipe(newRecipe){
     setRecipes([...recipes, newRecipe])
   }
+
+  function deleteRecipe(indexToDelete){
+    const filtered = recipes.filter((_, index)=> index !== indexToDelete)
+    setRecipes(filtered)
+  }
   
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
-      <RecipeList recipes={recipes} />
+      <RecipeList recipes={recipes} deleteRecipe={deleteRecipe}/>
       <RecipeCreate addRecipe={addRecipe}/>
     </div>
   );
