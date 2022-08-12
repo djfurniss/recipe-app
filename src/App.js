@@ -9,13 +9,16 @@ function App() {
 
   // TODO: Add the ability for the <RecipeList /> component to list and delete an existing recipe.
   // TODO: Add the ability for the <RecipeCreate /> component to create new recipes.
-
+//---handlers---
+  function addRecipe(newRecipe){
+    setRecipes([...recipes, newRecipe])
+  }
   
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
-      <RecipeList />
-      <RecipeCreate />
+      <RecipeList recipes={recipes} />
+      <RecipeCreate addRecipe={addRecipe}/>
     </div>
   );
 }
