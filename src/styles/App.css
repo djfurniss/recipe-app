@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,1000;1,1000&family=Tilt+Warp&display=swap');
+
+body{
+  margin: 0;
+}
+
+/* typography */
+header h1{
+  /* font-family: Playfair Display SC; */
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+html {
+  font-family: 'Nunito', sans-serif;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+/* --- recipe list carasol feature --- */
+
+.recipe-list-div{
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: rgb(232, 231, 233);
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.recipe-list-div p{
+  margin: 0 15px;
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.recipe-list-carasol{
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.recipe-list-carasol p{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* --- single recipe styling --- */
+
+.one-recipe{
+  padding: 10px;
+}
+
+.one-recipe img{
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.one-recipe p{
+  font-weight: 600;
+  padding: 8px;
+  text-align: center; /* don't know if I like this yet...*/
+}
+
+/* right scroll arrow */
+#right-arrow{
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#transp{
+  width: 30px;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #00000000, rgb(232, 231, 233), rgb(232, 231, 233));
+  z-index: 1;
+  margin-left: -25px;
+}
